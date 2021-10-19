@@ -1,19 +1,30 @@
 package com.company;
-import java.text.DateFormatSymbols;
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = Integer.parseInt(in.nextLine());
-        Task task = new Task(n);
-        task.checkIf3();
-        task.reversedLine();
-        task.changeFirsAndLastItem();
-        task.add1();
+        double a = 0,b = 0,c = 0,x = 0,y = 0;
+        Brick brick = new Brick();
+        brick.setA(4.3);
+        brick.setB(5.6);
+        brick.setC(4.2);
+        rectangleHole hole = new rectangleHole();
+        hole.setX(8.8);
+        hole.setY(9.6);
+        if((brick.getA() <= hole.getX() && brick.getB() <= hole.getY()) ||
+                (brick.getA() <= hole.getY() && brick.getB() <= hole.getX())){
+            System.out.println("Can push further");
+        }
+        else if((brick.getA() <= hole.getX() && brick.getC() <= hole.getY()) ||
+                (brick.getA() <= hole.getY() && brick.getC() <= hole.getX())){
+            System.out.println("Can push further");
+        }
+        else if((brick.getC() <= hole.getX() && brick.getB() <= hole.getY()) ||
+                (brick.getC() <= hole.getY() && brick.getB() <= hole.getX())){
+            System.out.println("Can push further");
+        }
+        else{
+            System.out.println("Cannot push further");
+        }
     }
     }
