@@ -9,11 +9,10 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int n = Integer.parseInt(in.nextLine());
-        Task task = new Task(n);
-        task.checkIf3();
-        task.reversedLine();
-        task.changeFirsAndLastItem();
-        task.add1();
+        System.out.println("What is your name?");
+        String name = in.nextLine();
+        System.out.println("Where do you live," + name + "?");
+        String address = in.nextLine();
+        System.out.printf("Your name is:%s, You live in:%s", name, address);
     }
     }
