@@ -8,12 +8,18 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = Integer.parseInt(in.nextLine());
-        Task task = new Task(n);
-        task.checkIf3();
-        task.reversedLine();
-        task.changeFirsAndLastItem();
-        task.add1();
+    Person p1 = new Person("Ivan", 2002);
+    System.out.println(p1);
+    p1.age();
+    p1.input();
+    p1.setName("Igor");
+    System.out.println(p1);
+    System.out.println("-----------------------------------");
+        Person p2 = new Person("Vasyl", 2002);
+        System.out.println(p2);
+        p1.age();
+        p1.input();
+        p1.setName("Vasya");
+        System.out.println(p2);
     }
     }
